@@ -1,0 +1,6 @@
+export const userActions={
+    SET_USER:"SET_USER",
+    SINGLE_USER:"SINGLE_USER",
+    EDIT_USER:"EDIT_USER",
+    DELETE_USER:"DELETE_USER"
+}
