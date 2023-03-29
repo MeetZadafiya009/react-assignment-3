@@ -28,7 +28,7 @@ function User(props) {
     useEffect(() => {
         fetchAllUsers();
     }, []);
-    if (tmp) {
+    if (singleData) {
         if (email == '') {
             setEmail(singleData.email);
         }
@@ -41,7 +41,7 @@ function User(props) {
         if (web == '') {
             setWeb(singleData.website);
         }
-        setTmp(false);
+        
     }
     const fetchAllUsers = async () => {
         let response = await fetch(' https://jsonplaceholder.typicode.com/users');
@@ -84,7 +84,7 @@ function User(props) {
         <>
             <section>
                 <div className="container-fluid">
-                    <div className="row px-3">
+                    <div className="row py-5 px-3">
                         {
                             userData.length == 0 ? <div className='col-12 loading-effect d-flex justify-content-center align-items-center'><img src="./../images/loading-loading-gif.gif" alt="loading effect" /></div> :
                                 userData.map((user, index) => {
